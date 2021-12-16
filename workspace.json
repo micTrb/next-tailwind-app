@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "markdown": "libs/markdown",
     "my-nx-next-app": "apps/my-nx-next-app",
     "my-nx-next-app-e2e": "apps/my-nx-next-app-e2e"
   }
