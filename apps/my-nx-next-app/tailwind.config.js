@@ -3,6 +3,8 @@ const { join } = require('path');
 // available since Nx v 12.5
 const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 
+console.log(createGlobPatternsForDependencies(__dirname));
+
 module.exports = {
   presets: [require('../../tailwind-workspace-preset.js')],
   purge: [

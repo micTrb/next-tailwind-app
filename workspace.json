@@ -3,6 +3,8 @@
   "projects": {
     "markdown": "libs/markdown",
     "my-nx-next-app": "apps/my-nx-next-app",
-    "my-nx-next-app-e2e": "apps/my-nx-next-app-e2e"
+    "my-nx-next-app-e2e": "apps/my-nx-next-app-e2e",
+    "shared-ui": "libs/shared/ui",
+    "storybook-e2e-ui-e2e": "apps/storybook-e2e/ui-e2e"
   }
 }
