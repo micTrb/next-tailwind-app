@@ -2,12 +2,13 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import classNames from 'classnames';
 
-export interface TopicButtonProps {
+export type TopicButtonProps = {
   topicName: string;
   onClick?: (topicName: string) => void;
 }
 
-export function TopicButton(props: TopicButtonProps) {
+export const TopicButton: React.FC<TopicButtonProps> = (props) => {
+
   const [icon, setIcon] = useState('');
 
   useEffect(() => {
@@ -15,7 +16,7 @@ export function TopicButton(props: TopicButtonProps) {
       const cleanedSvgName = props.topicName
         .replace(/[^a-zA-Z0-9]/g, '')
         .toLocaleLowerCase();
-        
+
       const topicSvgIcon = await import(`./${cleanedSvgName}.svg`);
       setIcon(topicSvgIcon.default);
     };
@@ -46,5 +47,3 @@ export function TopicButton(props: TopicButtonProps) {
     </div>
   );
 }
-
-export default TopicButton;
